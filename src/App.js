@@ -1,25 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import {
+  StyledApp,
+  StyledA,
+  StyledHeader,
+  StyledLogo,
+  StyledP,
+} from "./CustomComponents";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
+    <StyledApp>
+      <StyledHeader>
+        <StyledLogo src={logo} alt="logo" />
+        <StyledP>
           Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
+        </StyledP>
+        <StyledA
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
-      </header>
-    </div>
+        </StyledA>
+        <StyledP>
+          Made with{" "}
+          <StyledA
+            href="https://styled-components.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            styled-components
+          </StyledA>
+        </StyledP>
+      </StyledHeader>
+    </StyledApp>
   );
 }
 
